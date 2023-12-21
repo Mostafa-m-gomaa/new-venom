@@ -5,8 +5,7 @@ import { useState } from "react";
 import TickerTape from "./TradingViewWidget ";
 import ThemeChanger from "./ThemeChanger";
 import './sass-folder/header.css'
-         {/* <GoogleTransTwo /> */}
-            {/* <ThemeChanger /> */}
+
 const LandingHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,23 +13,24 @@ const LandingHeader = () => {
 
   return (
     <>
-      <div className="header">
-        <div className="in-header">
-         
+      <div className="px-2 md:px-4 border-b-blackGold border-b flex justify-between py-3 items-center header">
+        <div className="px-2 md:px-4 container mx-auto flex justify-between py-3 items-center">
+          <div className="hidden lg:flex items-center gap-2">
             <Link
               to={token ? "/dashboard" : "/login"}
-              className="login-btn"
+              className="bg-gold h-[40px] px-[12px] flex items-center justify-center rounded-lg"
             >
               {token ? "اذهب الي الصفحة الرئيسية" : "تسجيل الدخول"}
             </Link>
-   
-          
+            <GoogleTransTwo />
+            {/* <ThemeChanger /> */}
+          </div>
           <div className="hidden lg:flex">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 `${
-                  isActive ? "active" : ""
+                  isActive ? "bg-lightGold " : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
@@ -40,7 +40,7 @@ const LandingHeader = () => {
               to="/productsLanding"
               className={({ isActive }) =>
                 `${
-                  isActive ? "active" : ""
+                  isActive ? "bg-lightGold " : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
@@ -50,7 +50,7 @@ const LandingHeader = () => {
               to="/memberShip"
               className={({ isActive }) =>
                 `${
-                  isActive ? "active " : ""
+                  isActive ? "bg-lightGold " : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
@@ -60,7 +60,7 @@ const LandingHeader = () => {
               to="/leaderShip"
               className={({ isActive }) =>
                 `${
-                  isActive ? "active" : ""
+                  isActive ? "bg-lightGold " : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
@@ -70,16 +70,13 @@ const LandingHeader = () => {
               to="/aboutus"
               className={({ isActive }) =>
                 `${
-                  isActive ? "active" : ""
+                  isActive ? "bg-lightGold " : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
               من نحن
             </NavLink>
           </div>
-
-
-          {/* dwdwdwdwdwdwddwd */}
           <div
             className="lg:hidden cursor-pointer"
             onClick={() => setIsOpen(true)}
@@ -87,7 +84,7 @@ const LandingHeader = () => {
             <i className="fa-solid fa-bars text-4xl"></i>
           </div>{" "}
           <Link to={"/"}>
-            <img src={logo} alt="Logo" className="logo" />
+            <img src={logo} alt="Logo" className="h-10" />
           </Link>{" "}
           {isOpen && (
             <div className=" animation lg:hidden fixed h-full flex w-full right-0 top-0 z-50">

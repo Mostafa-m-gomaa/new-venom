@@ -8,9 +8,18 @@ body {
 }
 html {
   color: white;
+  scroll-behavior: smooth;
 }
 .hoverGold {
   @apply hover:text-gold transition;
+}
+:root{
+  --primary-clr1: #1748C1 ;
+  --primary-clr3: #87CEEA ;
+  --primary-clr3: #01004C ;
+  --secondry-clr1: #FFB607 ;
+  --secondry-clr2: #F6BABA ;
+
 }
 
 /* Main Heading  */
