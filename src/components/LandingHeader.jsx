@@ -13,8 +13,8 @@ const LandingHeader = () => {
   const token = localStorage.getItem("token");
 
   return (
-    <>
-      <div className="header">
+  
+      <div className="header" data-aos="fade-down"  data-aos-duration="2000">
         <div className="in-header">
          
             <Link
@@ -36,8 +36,8 @@ const LandingHeader = () => {
             >
               الصفحة الرئيسية
             </NavLink>
-            <NavLink
-              to="/productsLanding"
+            <a
+              href="#prod"
               className={({ isActive }) =>
                 `${
                   isActive ? "active" : ""
@@ -45,7 +45,7 @@ const LandingHeader = () => {
               }
             >
               المنتجات
-            </NavLink>
+            </a>
             <NavLink
               to="/memberShip"
               className={({ isActive }) =>
@@ -56,8 +56,8 @@ const LandingHeader = () => {
             >
               الباقات
             </NavLink>
-            <NavLink
-              to="/leaderShip"
+            <a
+              href="#leads"
               className={({ isActive }) =>
                 `${
                   isActive ? "active" : ""
@@ -65,7 +65,7 @@ const LandingHeader = () => {
               }
             >
               القيادة
-            </NavLink>
+            </a>
             <NavLink
               to="/aboutus"
               className={({ isActive }) =>
@@ -149,7 +149,7 @@ const LandingHeader = () => {
             </div>
           )}
         </div>
-
+{/* 
         {isOpen && (
           <div className=" animation lg:hidden fixed h-full flex w-full right-0 top-0 z-50">
             <div className="overflow-y-auto bg-blackGold w-1/2 p-4 text-sm flex flex-col gap-6 items-center">
@@ -209,11 +209,11 @@ const LandingHeader = () => {
               onClick={() => setIsOpen(false)}
             />
           </div>
-        )}
-      </div>
+        )} */}
       {/* <TickerTape /> */}
       {/* <EconomicCalendar /> */}
-    </>
+    
+      </div>
   );
 };
 

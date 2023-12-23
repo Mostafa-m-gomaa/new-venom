@@ -4,17 +4,14 @@ import { useContext } from "react";
 import { AppContext, route } from "../App";
 import axios from "axios";
 import FooterReviews from "./FooterReviews";
+import trading from '../assets/WhatsApp Image 2023-12-23 at 02.30.41_197ad013.jpg'
+import './sass-folder/footer.css'
 const Footer = () => {
   const media = [
     {
-      label: "youtube",
-      icon: "fa-brands fa-youtube",
-      link: "https://www.youtube.com/channel/UCKlzTSsJBGg48ElLpUDT9rA",
-    },
-    {
-      label: "facebook",
-      icon: "fa-brands fa-facebook-f",
-      link: "https://www.facebook.com/profile.php?id=100095054437735",
+      label: "telegram",
+      icon: "fa-brands fa-telegram",
+      link: "https://t.me/THENNOFFICIAL",
     },
     {
       label: "twitter",
@@ -24,59 +21,25 @@ const Footer = () => {
     {
       label: "instagram",
       icon: "fa-brands fa-instagram",
-      link: "https://www.instagram.com/wealth_makers_official/?igshid=Y2I2MzMwZWM3ZA",
+      link: "https://instagram.com/thennofficial?igshid=MzRlODBiNWFlZA==",
+    },
+    {
+      label: "mail",
+      icon: "fa-brands fa-google",
+      link: "mailto:info@thenewnormal.trade",
     },
     {
       label: "tiktok",
       icon: "fa-brands fa-tiktok",
-      link: "https://www.tiktok.com/@wealth_makers_official",
+      link: "https://www.tiktok.com/@thenewnormalofficial",
     },
   ];
   const lang = useContext(AppContext);
   return (
-    <div className="bg-dark">
-      <div className="border-t py-12 border-t-gray  ">
-        <div className="mx-4 lg:grid lg:grid-cols-9 gap-4">
-          <div className="col-span-3">
-            <h4 className="text-2xl font-semibold my-6">تواصل معنا</h4>
-            <div>
-              <div className="flex gap-4 my-2 group">
-                <div className="w-[40px] h-[40px] bg-gold rounded-full flex justify-center items-center">
-                  <i className="fa-regular fa-envelope text-xl text-dark"></i>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all">
-                  <h6 className="text-lightgray text-sm m-0">
-                    البريد الالكتروني
-                  </h6>
-                  <div>wealthmakers.helpcenter@gmail.com</div>
-                </div>
-              </div>
-              <div className="flex gap-4 my-2 group">
-                <div className="w-[40px] h-[40px] bg-gold rounded-full flex justify-center items-center">
-                  <i className="fa-brands fa-whatsapp text-2xl text-dark"></i>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all">
-                  <a
-                    href="https://wa.me/message/IOYQFZS6IDWHC1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hoverGold"
-                  >
-                    <h6 className="text-lightgray text-sm m-0">واتس أب</h6>
-                  </a>
-                </div>
-              </div>
-              <div className="flex gap-4 my-2 group">
-                <div className="w-[40px] h-[40px] bg-gold rounded-full flex justify-center items-center">
-                  <i className="fa-solid fa-location-dot text-xl text-dark"></i>
-                </div>
-                <div className="opacity-0 group-hover:opacity-100 transition-all">
-                  <h6 className="text-lightgray text-sm m-0">العنوان</h6>
-                  <div>Konstanzenstrasse .64 90439 Nuremberg Germany</div>
-                </div>
-              </div>
-            </div>
-            <div className="flex my-6">
+    <div className="footer">
+    
+           <div className="col-span-3 p-5">
+            <div className="flex my-6 icon-cont">
               {media.map((element) => (
                 <a
                   href={element.link}
@@ -88,22 +51,19 @@ const Footer = () => {
                   <i className={`${element.icon} text-xl`}></i>
                 </a>
               ))}
+                       <a
+                  href="https://www.tradingview.com/u/THENEWNORMAL/"
+                  target="_blank"
+                  className="icon-cont w-[40px] h-[40px] flex items-center justify-center rounded-lg bg-gray mx-2  hover:text-gray hover:bg-[#ffffff] transition"
+                >
+                <img src={trading} alt="" />
+                </a>
             </div>
           </div>
 
-          <div className="col-span-3">
-            <FooterReviews />
-          </div>
-          <div className="col-span-3">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.5023372285364!2d11.0399905!3d49.437222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f56ee543dbfc7%3A0xf0aa75cabcc60947!2sKonstanzenstra%C3%9Fe%2064%2C%2090439%20N%C3%BCrnberg%2C%20Germany!5e0!3m2!1sen!2s!4v1692242514091!5m2!1sen!2s"
-              className="rounded-xl w-full h-[200px] md:h-[250px] lg:h-[350px] "
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </div>
+    
+       
+     
       <div className="border-t-gold border-t py-3">
         <div className="container mx-auto  flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center">
           <div className="flex gap-4">
@@ -124,17 +84,17 @@ const Footer = () => {
             >
               الشروط والاحكام
             </a>
-            <Link to="/aboutus" className="hoverGold">
+            <a href="who-us" className="hoverGold">
               من نحن
-            </Link>
+            </a>
           </div>
-          <div className="flex gap-3 items-center text-sm sm:text-base">
+          {/* <div className="flex gap-3 items-center text-sm sm:text-base">
             جميع الحقوق محفوظة صناع الثروة 2023
             <span className="h-[20px] w-[20px] bg-gold text-dark font-semibold flex items-center justify-center rounded-full">
               C
             </span>
             <span className="text-gold">صناع الثروة 2023</span>
-          </div>
+          </div> */}
           <div>
             <img src={payment} alt="" />
           </div>

@@ -34,10 +34,14 @@ import Resetecode from "./landingPage/Resetecode";
 import NewPassword from "./landingPage/NewPassword";
 import Marketing from "./dashboard/markiting/Marketing";
 import MarketingTree from "./dashboard/markiting/MarketingTree";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import the AOS styles
+
+
 
 // *******production
-export const route = "https://api.wealthmakers-fx.com/api/v1/";
-// export const route = "https://apitest.wealthmakers-fx.com/api/v1/";
+// export const route = "https://api.wealthmakers-fx.com/api/v1/";
+export const route = "https://apiTest.wealthmakers-fx.com/api/v1/";
 
 export const AppContext = createContext();
 
@@ -59,6 +63,10 @@ export default function App() {
       document.querySelector("html").setAttribute("data-theme", "light");
     }
   }, []);
+  useEffect(() =>{
+    AOS.init();
+    AOS.refresh();
+  },[])
   useEffect(() => {
     axios
       .get(`${route}store/cart`, {
