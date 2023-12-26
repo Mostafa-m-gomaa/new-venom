@@ -36,6 +36,8 @@ import Marketing from "./dashboard/markiting/Marketing";
 import MarketingTree from "./dashboard/markiting/MarketingTree";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the AOS styles
+import { AnimatePresence } from "framer-motion";
+import Legal from "./landingPage/components/Legal";
 
 
 
@@ -103,6 +105,7 @@ export default function App() {
         setUpdate,
       }}
     >
+      
       <>
         {loading && (
           <div className="fixed w-full h-full top-0 right-0 bg-[#000] z-[10000] bg-opacity-75 flex justify-center items-center">
@@ -137,6 +140,7 @@ export default function App() {
             <Route path="/resetepassword" element={<Resetepassword />} />
             <Route path="/resetecode" element={<Resetecode />} />
             <Route path="/newpassword" element={<NewPassword />} />
+            <Route path="/legal" element={<Legal />} />
           </Route>
           <Route path="" element={<DashboardLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
@@ -151,6 +155,7 @@ export default function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/education" element={<EducationCategories />} />
             <Route path="/education/:catId" element={<Courses />} />
+        
             <Route
               path="/education/:catId/course/:courseId"
               element={<SingelCourse />}
@@ -158,9 +163,11 @@ export default function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/lives" element={<Lives />} />
+           
           </Route>
         </Routes>
       </>
+    
     </AppContext.Provider>
   );
 }

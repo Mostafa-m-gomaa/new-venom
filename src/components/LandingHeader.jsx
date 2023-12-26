@@ -25,7 +25,7 @@ const LandingHeader = () => {
             </Link>
    
           
-          <div className="hidden lg:flex">
+          
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -46,8 +46,8 @@ const LandingHeader = () => {
             >
               المنتجات
             </a>
-            <NavLink
-              to="/memberShip"
+            <a
+             href="#packs"
               className={({ isActive }) =>
                 `${
                   isActive ? "active " : ""
@@ -55,7 +55,7 @@ const LandingHeader = () => {
               }
             >
               الباقات
-            </NavLink>
+            </a>
             <a
               href="#leads"
               className={({ isActive }) =>
@@ -66,17 +66,17 @@ const LandingHeader = () => {
             >
               القيادة
             </a>
-            <NavLink
-              to="/aboutus"
+            <a
+              href="#who"
               className={({ isActive }) =>
                 `${
                   isActive ? "active" : ""
                 } pt-1 pb-2 px-2 rounded-lg mx-2 block w-fit`
               }
             >
-              من نحن
-            </NavLink>
-          </div>
+              تعرف علينا
+            </a>
+          
 
 
           {/* dwdwdwdwdwdwddwd */}

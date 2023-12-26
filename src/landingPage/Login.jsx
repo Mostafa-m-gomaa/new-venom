@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
-import authPhoto from "../assets/auth.webp";
+import authPhoto from "../assets/logo.png";
 import data from "../vlaue";
 import axios from "axios";
 import { AppContext, route } from "../App";
@@ -43,6 +43,7 @@ const Login = () => {
           }
         )
         .then((res) => {
+          console.log(res);
           toast.success("Done");
           if (res.data) {
             localStorage.setItem("data", JSON.stringify(res.data.data));

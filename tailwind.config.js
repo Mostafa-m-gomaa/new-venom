@@ -7,8 +7,8 @@ export default {
     extend: {},
     colors: {
       transparent: "transparent",
-      gold: "var(--gold)",
-      dark: "var(--dark)",
+      gold: "var(--primary-clr2)",
+      dark: "var(--primary-clr3)",
       gray: "var(--gray)",
       lightGray: "var(--lightGray)",
       lightGold: "var(--lightGold)",

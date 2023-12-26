@@ -18,13 +18,15 @@ html {
 }
 :root{
   --primary-clr1: #1748C1 ;
-  --primary-clr3: #87CEEA ;
+  --primary-clr2: #87CEEA ;
   --primary-clr3: #01004C ;
   --secondry-clr1: #FFB607 ;
   --secondry-clr2: #F6BABA ;
 
 }
-
+#root{
+overflow-x: hidden
+}
 /* Main Heading  */
 .mainHeading {
   @apply relative my-20 w-full h-[1px] bg-gray;

@@ -28,6 +28,9 @@ z-index: 1000;
 a{
     min-width: fit-content;
     transition: 0.5s;
+    align-items: center;
+    display: flex;
+    
     color: rgb(218, 213, 213) !important;
     &:hover{
         color: white !important;

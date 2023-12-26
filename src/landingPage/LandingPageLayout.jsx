@@ -5,7 +5,7 @@ import LandingHeader from "../components/LandingHeader";
 const LandingPageLayout = () => {
   return (
     <>
-      <LandingHeader data-aos="fade-down" />
+      <LandingHeader  />
       <Outlet />
       <Footer />
     </>

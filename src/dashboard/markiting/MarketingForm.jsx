@@ -120,8 +120,7 @@ const MarketingForm = () => {
         </div>
         <div className="space-y-3">
           <label>
-            لماذا تود ان تكون مرشد للتداول ف الاسواق الماليه مع مؤسسه صُناع
-            الثروه :
+            لماذا تود ان تكون مرشد للتداول ف الاسواق الماليه مع مؤسسه نيو نورمال :
           </label>
           <input
             type="text"
@@ -174,6 +173,16 @@ const MarketingForm = () => {
         </div>
         <div className="space-y-3">
           <label>إثبات الهوية : (Pdf)</label>
+          <input
+            type="file"
+            required
+            // accept=".pdf"
+            onChange={(e) => setValues(e.target.files[0], "identity")}
+            className=" w-full py-2 bg-dark border border-goldenGray px-6  rounded-md"
+          />
+        </div>
+        <div className="space-y-3">
+          <label>Cv : (Pdf)</label>
           <input
             type="file"
             required

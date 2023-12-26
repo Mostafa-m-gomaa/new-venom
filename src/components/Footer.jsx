@@ -37,10 +37,27 @@ const Footer = () => {
   const lang = useContext(AppContext);
   return (
     <div className="footer">
-    
-           <div className="col-span-3 p-5">
-            <div className="flex my-6 icon-cont">
-              {media.map((element) => (
+      <div className="border-t-gold border-t py-3">
+        <div className="container mx-auto  flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center">
+          <div className="flex gap-4">
+            {/* <a
+              href="https://drive.google.com/file/d/108UDsPrCjCBLvy9WnQdQp3Qv3WAj95QM/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hoverGold"
+            >
+              سياسة الخصوصية
+            </a>
+            <a
+              target="_blank"
+              href="
+            https://drive.google.com/file/d/16HD6pDIHZQBVQA0c12W4tNVJUZvBeY6x/view"
+              rel="noopener noreferrer"
+              className="hoverGold"
+            >
+              الشروط والاحكام
+            </a> */}
+                      {media.map((element) => (
                 <a
                   href={element.link}
                   target="_blank"
@@ -58,43 +75,14 @@ const Footer = () => {
                 >
                 <img src={trading} alt="" />
                 </a>
-            </div>
-          </div>
-
-    
-       
-     
-      <div className="border-t-gold border-t py-3">
-        <div className="container mx-auto  flex flex-col lg:flex-row gap-4 lg:gap-0 justify-between items-center">
-          <div className="flex gap-4">
-            <a
-              href="https://drive.google.com/file/d/108UDsPrCjCBLvy9WnQdQp3Qv3WAj95QM/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hoverGold"
-            >
-              سياسة الخصوصية
-            </a>
-            <a
-              target="_blank"
-              href="
-            https://drive.google.com/file/d/16HD6pDIHZQBVQA0c12W4tNVJUZvBeY6x/view"
-              rel="noopener noreferrer"
-              className="hoverGold"
-            >
-              الشروط والاحكام
-            </a>
-            <a href="who-us" className="hoverGold">
+            <a href="#who" className="hoverGold">
               من نحن
             </a>
+          
           </div>
-          {/* <div className="flex gap-3 items-center text-sm sm:text-base">
-            جميع الحقوق محفوظة صناع الثروة 2023
-            <span className="h-[20px] w-[20px] bg-gold text-dark font-semibold flex items-center justify-center rounded-full">
-              C
-            </span>
-            <span className="text-gold">صناع الثروة 2023</span>
-          </div> */}
+          <Link to="/legal">
+              Legal and Privacy
+            </Link>
           <div>
             <img src={payment} alt="" />
           </div>

@@ -28,6 +28,8 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
   transition: 0.5s;
+  align-items: center;
+  display: flex;
   color: rgb(218, 213, 213) !important;
 }
 .header .in-header a:hover {

@@ -43,24 +43,7 @@ const PackageSlider = ({ packages }) => {
           <PackageCard key={item?._id} data={item} />
         ))}
       </Slider>
-      <div className="flex justify-center gap-10">
-        <img
-          src={arrow}
-          className="h-36 md:h-44 lg:h-48 rotate-180 cursor-pointer"
-          onClick={() => {
-            document.querySelector(".slick-next")?.click();
-          }}
-          alt=""
-        />
-        <img
-          src={arrow}
-          onClick={() => {
-            document.querySelector(".slick-prev")?.click();
-          }}
-          className="h-36 md:h-44 lg:h-48 cursor-pointer"
-          alt=""
-        />
-      </div>
+
     </div>
   );
 };
